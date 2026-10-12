@@ -2,6 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
+from helpers import hira_to_roma
+
 
 def todofuken_search():
     base_url = "https://uub.jp/ctv/search.cgi"
@@ -25,20 +27,28 @@ def todofuken_search():
         "M": "part"
     }
 
-    table_data = []
     response = requests.get(base_url, params=params)
     response.encoding = response.apparent_encoding
-    print(response)
 
-    soup = BeautifulSoup(response.text, "html.parser") # It will automatically use html.parser anyway
-    print(len(soup))
+    return response.text
+
+
+def parse_result(str):
+    table_data = [] # Init empty set first
+
+    soup = BeautifulSoup(str, "html.parser") # It will automatically use html.parser anyway
+    print("Raw: ", len(str), "; Soup: ", len(soup))
 
     pref_boxes = soup.find_all("div", class_="table_box")
+    print("Pref_boxes: ", len(pref_boxes))
 
-    print(len(pref_boxes))
-
-    # Each table_box is a div, include the html table for todofuken in this format:
-    #	都道府県	政令市/郡	自治体名等	ふりがな
+    """
+    Each table_box is a div, include the html table for todofuken in this format:
+    	都道府県	政令市/郡	自治体名等	ふりがな
+    Every prefecture will have "県" in it, with the exception of Hokkaido
+    
+     
+    """
     for pref_box in pref_boxes:
         table = pref_box.find("table")
         if not table:
@@ -66,9 +76,16 @@ def todofuken_search():
 
     return pd.DataFrame(table_data)
 
-
 def main():
-    print(todofuken_search())
+    with open("result.html") as file:
+        parse_result(file.read())
+
+    print(hira_to_roma("しろいし・く"))
+    print(hira_to_roma("ほっかい・どう"))
+    print(hira_to_roma("しちかしゅく・まち"))
+
+    
+    # print(todofuken_search())
 
 
 main()

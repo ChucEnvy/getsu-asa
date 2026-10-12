@@ -1,0 +1,106 @@
+HEPBURN = {
+    "あ": "a",
+    "い": "i",
+    "う": "u",
+    "え": "e",
+    "お": "o",
+    "か": "ka",
+    "き": "ki",
+    "く": "ku",
+    "け": "ke",
+    "こ": "ko",
+    "が": "ga",
+    "ぎ": "gi",
+    "ぐ": "gu",
+    "げ": "ge",
+    "ご": "go",
+    "さ": "sa",
+    "し": "shi",
+    "す": "su",
+    "せ": "se",
+    "そ": "so",
+    "ざ": "za",
+    "じ": "ji",
+    "ず": "zu",
+    "ぜ": "ze",
+    "ぞ": "zo",
+    "た": "ta",
+    "ち": "chi",
+    "つ": "tsu",
+    "て": "te",
+    "と": "to",
+    "だ": "da",
+    "ぢ": "ji",
+    "づ": "zu",
+    "で": "de",
+    "ど": "do",
+    "な": "na",
+    "に": "ni",
+    "ぬ": "nu",
+    "ね": "ne",
+    "の": "no",
+    "は": "ha",
+    "ひ": "hi",
+    "ふ": "fu",
+    "へ": "he",
+    "ほ": "ho",
+    "ば": "ba",
+    "び": "bi",
+    "ぶ": "bu",
+    "べ": "be",
+    "ぼ": "bo",
+    "ぱ": "pa",
+    "ぴ": "pi",
+    "ぷ": "pu",
+    "ぺ": "pe",
+    "ぽ": "po",
+    "ま": "ma",
+    "み": "mi",
+    "む": "mu",
+    "め": "me",
+    "も": "mo",
+    "や": "ya",
+    "ゆ": "yu",
+    "よ": "yo",
+    "ら": "ra",
+    "り": "ri",
+    "る": "ru",
+    "れ": "re",
+    "ろ": "ro",
+    "わ": "wa",
+    "ゐ": "yi",
+    "う": "u",
+    "ゑ": "ye",
+    "を": "wo",
+    "ん": "n"
+}
+
+# digraphs
+HEPBURN_DI = {
+    "しゃ": "sha",
+    "しゅ": "shu",
+    "しょ": "sho",
+    "じゃ": "ja",
+    "じゅ": "ju",
+    "じょ": "jo",
+    "ちゃ": "cha",
+    "ちゅ": "chu",
+    "ちょ": "cho",
+}
+
+def hira_to_roma(str):
+    # Sanitize input string
+    str = str.strip().lower().replace("・", " ")
+
+    # First pass: replace digraphs, since the first half of the diagraphs are also in the base HEPBURN
+    for diagraph in HEPBURN_DI:
+        str = str.replace(diagraph, HEPBURN_DI[diagraph])
+
+    # Second pass: replace the rest of the characters
+    for hira in HEPBURN:
+        str = str.replace(hira, HEPBURN[hira])
+
+    while str.find("っ") != -1:
+        str = str.replace("っ", str[str.find("っ") + 1], 1)
+
+    return str.capitalize()
