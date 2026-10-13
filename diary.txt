@@ -1,0 +1,20 @@
+26/10/12
+    ON THE SECOND THOUGHTS:
+    Since this is only the prefecture area, 
+    it would be quite hard to pin point the area where the user would like to search,
+    and the trash collection schedule will change as small as postal code level,
+    it would be better to also have the postal code search.
+
+    (I'm still thinking on the way to implement the postal code list stuff, since there
+    is no exact list of postal code atm, at least not that I can find.
+    Considering using this site: 
+    https://postaljp.com/
+
+    The data is structured quite well, and we can access the entire list of postal code
+    of each municipalities using url like this: https://postaljp.com/aichiken/amashi/
+    )
+
+
+26/10/13
+    Done parsing the prefecture post counts.
+    Prepare for scraping each individual prefecture links for code.
