@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
-from helpers import hira_to_roma
+from parsers.romaji import hira_to_roma
 
 
 def todofuken_search():
@@ -46,8 +46,6 @@ def parse_result(str):
     Each table_box is a div, include the html table for todofuken in this format:
     	都道府県	政令市/郡	自治体名等	ふりがな
     Every prefecture will have "県" in it, with the exception of Hokkaido
-    
-     
     """
     for pref_box in pref_boxes:
         table = pref_box.find("table")
@@ -77,15 +75,30 @@ def parse_result(str):
     return pd.DataFrame(table_data)
 
 def main():
-    with open("result.html") as file:
+    with open("raws/todofuken.html") as file:
         parse_result(file.read())
-
-    print(hira_to_roma("しろいし・く"))
-    print(hira_to_roma("ほっかい・どう"))
-    print(hira_to_roma("しちかしゅく・まち"))
 
     
     # print(todofuken_search())
 
 
 main()
+
+
+"""
+    ON THE SECOND THOUGHTS:
+    Since this is only the prefecture area, 
+    it would be quite hard to pin point the area where the user would like to search,
+    and the trash collection schedule will change as small as postal code level,
+    it would be better to also have the postal code search.
+
+    (I'm still thinking on the way to implement the postal code list stuff, since there
+    is no exact list of postal code atm, at least not that I can find.
+    Considering using this site: 
+    https://postaljp.com/
+
+    The data is structured quite well, and we can access the entire list of postal code
+    of each municipalities using url like this: https://postaljp.com/aichiken/amashi/
+    )
+
+"""

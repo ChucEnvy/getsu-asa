@@ -1,0 +1,486 @@
+<a id="page-top"></a>
+<div class="site-shell" data-protonpass-form="">
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="header-brand-row"> <a href="/" class="site-title"> <svg class="site-logo-mark"
+                        viewBox="0 0 64 64" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="4" y="4" width="56" height="56" rx="12" fill="#0f62fe"></rect>
+                        <path d="M20 16h24v8H34v24h-8V24H20zM22 32h20v8H22z" fill="#ffffff"></path>
+                    </svg> <span>全国郵便番号検索</span> </a>
+                <nav class="header-nav" aria-label="主要導線"> <a href="/">ホーム</a> <a href="/#prefectures">都道府県一覧</a> <a
+                        href="/guides/">ガイド</a> <a href="/changes/">更新情報</a> </nav>
+            </div>
+            <form class="header-search-form" action="/" method="get" role="search"> <label class="sr-only"
+                    for="header-postal-search">郵便番号検索</label> <input id="header-postal-search" name="q" type="search"
+                    inputmode="search" maxlength="60" placeholder="郵便番号・住所を検索" autocomplete="off"> <button
+                    type="submit">検索</button> </form>
+        </div>
+    </header>
+    <main class="page-content">
+        <script
+            type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"全国郵便番号検索","url":"https://postaljp.com","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://postaljp.com/?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
+        <section class="hero">
+            <p class="hero-eyebrow">全国の郵便番号・住所データ</p>
+            <h1>郵便番号を検索</h1>
+            <p>
+                全国の郵便番号、住所、読み方を番号・住所のどちらからでも確認できます。
+                <a href="/#prefectures">都道府県ごとの一覧</a>
+                から探すことも、下の検索から直接調べることもできます。
+            </p>
+            <div class="hero-actions"> <a class="action-link" href="#search-panel">郵便番号から探す</a> <a
+                    class="secondary-link" href="#prefectures">住所からたどる</a> </div>
+        </section>
+        <section class="home-features" aria-label="サイトの使い方">
+            <article> <span class="feature-step">01</span>
+                <h2>番号から探す</h2>
+                <p>郵便番号または住所を入力すると、住所と読み方の候補をすぐに確認できます。</p>
+            </article>
+            <article> <span class="feature-step">02</span>
+                <h2>住所からたどる</h2>
+                <p>都道府県、市区町村、町域の順に進んで、番号が分からない住所も探せます。</p>
+            </article>
+            <article> <span class="feature-step">03</span>
+                <h2>住所をコピー</h2>
+                <p>詳細ページでは、住所・ふりがな・ローマ字と宛名の記入例をまとめて確認できます。</p>
+            </article>
+        </section>
+        <section class="panel home-search featured-panel" id="search-panel">
+            <div class="section-head">
+                <h2>郵便番号検索</h2>
+                <p>
+                    郵便番号は先頭3桁から、住所は2文字以上の漢字・かな・ローマ字で検索できます。現在の収録件数は
+                    120,720件です。
+                </p>
+            </div>
+            <style>
+                astro-island,
+                astro-slot,
+                astro-static-slot {
+                    display: contents
+                }
+            </style>
+            <script>(() => { var l = (n, t) => { let i = async () => { await (await n())() }, e = typeof t.value == "object" ? t.value : void 0, s = { timeout: e == null ? void 0 : e.timeout }; "requestIdleCallback" in window ? window.requestIdleCallback(i, s) : setTimeout(i, s.timeout || 200) }; (self.Astro || (self.Astro = {})).idle = l; window.dispatchEvent(new Event("astro:idle")); })();</script>
+            <script>(() => { var g = Object.defineProperty; var w = (c, s, d) => s in c ? g(c, s, { enumerable: !0, configurable: !0, writable: !0, value: d }) : c[s] = d; var l = (c, s, d) => w(c, typeof s != "symbol" ? s + "" : s, d); var E = new Set(["__proto__", "constructor", "prototype"]); { let c = { 0: t => y(t), 1: t => d(t), 2: t => new RegExp(t), 3: t => new Date(t), 4: t => new Map(d(t)), 5: t => new Set(d(t)), 6: t => BigInt(t), 7: t => new URL(t), 8: t => new Uint8Array(t), 9: t => new Uint16Array(t), 10: t => new Uint32Array(t), 11: t => Number.POSITIVE_INFINITY * t }, s = t => { let [p, e] = t; return p in c ? c[p](e) : void 0 }, d = t => t.map(s), y = t => typeof t != "object" || t === null ? t : Object.fromEntries(Object.entries(t).map(([p, e]) => [p, s(e)])); class f extends HTMLElement { constructor() { super(...arguments); l(this, "Component"); l(this, "hydrator"); l(this, "hydrate", async () => { var b; if (!this.hydrator || !this.isConnected) return; let e = (b = this.parentElement) == null ? void 0 : b.closest("astro-island[ssr]"); if (e) { e.addEventListener("astro:hydrate", this.hydrate, { once: !0 }); return } let n = this.querySelectorAll("astro-slot"), r = {}, i = this.querySelectorAll("template[data-astro-template]"); for (let o of i) { let a = o.closest(this.tagName); a != null && a.isSameNode(this) && (r[o.getAttribute("data-astro-template") || "default"] = o.innerHTML, o.remove()) } for (let o of n) { let a = o.closest(this.tagName); a != null && a.isSameNode(this) && (r[o.getAttribute("name") || "default"] = o.innerHTML) } let u; try { u = this.hasAttribute("props") ? y(JSON.parse(this.getAttribute("props"))) : {} } catch (o) { let a = this.getAttribute("component-url") || "<unknown>", v = this.getAttribute("component-export"); throw v && (a += ` (export ${v})`), console.error(`[hydrate] Error parsing props for component ${a}`, this.getAttribute("props"), o), o } let h; await this.hydrator(this)(this.Component, u, r, { client: this.getAttribute("client") }), this.removeAttribute("ssr"), this.dispatchEvent(new CustomEvent("astro:hydrate")) }); l(this, "unmount", () => { this.isConnected || this.dispatchEvent(new CustomEvent("astro:unmount")) }) } disconnectedCallback() { document.removeEventListener("astro:after-swap", this.unmount), document.addEventListener("astro:after-swap", this.unmount, { once: !0 }) } connectedCallback() { if (!this.hasAttribute("await-children") || document.readyState === "interactive" || document.readyState === "complete") this.childrenConnectedCallback(); else { let e = () => { document.removeEventListener("DOMContentLoaded", e), n.disconnect(), this.childrenConnectedCallback() }, n = new MutationObserver(() => { var r; ((r = this.lastChild) == null ? void 0 : r.nodeType) === Node.COMMENT_NODE && this.lastChild.nodeValue === "astro:end" && (this.lastChild.remove(), e()) }); n.observe(this, { childList: !0 }), document.addEventListener("DOMContentLoaded", e) } } async childrenConnectedCallback() { let e = this.getAttribute("before-hydration-url"); e && await import(e), this.start() } getRetryImportUrl(e) { let n = new URL(e, document.baseURI), r = `astro-retry=${Date.now()}`, i = n.hash.replace(/^#/, ""); return n.hash = i ? `${i}&${r}` : r, n.toString() } async importWithRetry(e) { try { return await import(e) } catch (n) { return await new Promise(r => setTimeout(r, 1e3)), import(this.getRetryImportUrl(e)) } } handleHydrationError(e) { let n = this.getAttribute("component-url"), r = new CustomEvent("astro:hydration-error", { cancelable: !0, bubbles: !0, composed: !0, detail: { error: e, componentUrl: n } }); this.dispatchEvent(r) && console.error(`[astro-island] Error hydrating ${n}`, e) } async start() { let e = JSON.parse(this.getAttribute("opts")), n = this.getAttribute("client"); if (Astro[n] === void 0) { window.addEventListener(`astro:${n}`, () => this.start(), { once: !0 }); return } try { await Astro[n](async () => { let r = this.getAttribute("renderer-url"); try { let [i, { default: u }] = await Promise.all([this.importWithRetry(this.getAttribute("component-url")), r ? this.importWithRetry(r) : Promise.resolve({ default: () => () => { } })]), h = this.getAttribute("component-export") || "default"; if (h.includes(".")) { this.Component = i; for (let m of h.split(".")) { if (E.has(m) || !this.Component || typeof this.Component != "object" && typeof this.Component != "function" || !Object.hasOwn(this.Component, m)) throw new Error(`Invalid component export path: ${h}`); this.Component = this.Component[m] } } else { if (E.has(h)) throw new Error(`Invalid component export path: ${h}`); this.Component = i[h] } return this.hydrator = u, this.hydrate } catch (i) { return this.handleHydrationError(i), () => { } } }, e, this) } catch (r) { this.handleHydrationError(r) } } attributeChangedCallback() { this.hydrate() } } l(f, "observedAttributes", ["props"]), customElements.get("astro-island") || customElements.define("astro-island", f) } })();</script>
+            <astro-island uid="YJmPF" component-url="/_astro/SearchWidget.HlAubWXT.js" component-export="default"
+                renderer-url="/_astro/client.svelte.DSiKfh2Z.js" props="{}" client="idle"
+                opts="{&quot;name&quot;:&quot;SearchWidget&quot;,&quot;value&quot;:true}" await-children=""><!--[-->
+                <div class="search-widget"><label class="search-label" for="postal-search">郵便番号または住所を入力</label> <input
+                        id="postal-search" class="search-input" inputmode="search" maxlength="60"
+                        placeholder="例：100-0001、東京都千代田区" autocomplete="off">
+                    <p class="search-help">郵便番号は先頭3桁から、住所は2文字以上の漢字・かな・ローマ字から検索できます。</p> <!--[-1--><!--]-->
+                    <!--[-1--><!--]--> <!--[-1--><!--]-->
+                </div><!--]-->
+            </astro-island>
+            <div class="data-source-note"> <strong>元データ取得日: 2026-10-06</strong> <span>日本郵便の公開データをもとに整理しています。</span> <a
+                    href="/guides/about-postal-data/">出典と更新方針</a> </div>
+        </section>
+        <section class="panel">
+            <div class="section-head">
+                <h2>郵便番号データの更新状況</h2>
+                <p> 日本郵便データで更新対象とされた項目を公開しています。 </p>
+            </div>
+            <div class="narrative">
+                <p> 2026-10-06取得分で、追加・変更対象として公開された9件を掲載しています。 </p>
+                <p><a class="secondary-link" href="/changes/">郵便番号データの更新情報を見る</a></p>
+            </div>
+        </section>
+        <section class="listing-card" id="prefectures">
+            <div class="section-head">
+                <h2>都道府県一覧</h2>
+                <p> 47都道府県、1,892市区町村、
+                    119,028町域を収録しています。
+                </p>
+            </div>
+            <div class="generator-grid"> <a class="generator-card" href="/aichiken/"> <strong>愛知県</strong> <span
+                        class="generator-subtitle">あいちけん</span>
+                    <p> 愛知県の市区町村別郵便番号一覧です。69市区町村、
+                        7,247件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>69 市区町村</span> <span>7254 町域</span> <span>7,247 件</span> </div>
+                </a><a class="generator-card" href="/ehimeken/"> <strong>愛媛県</strong> <span
+                        class="generator-subtitle">えひめけん</span>
+                    <p> 愛媛県の市区町村別郵便番号一覧です。20市区町村、
+                        1,743件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>20 市区町村</span> <span>1713 町域</span> <span>1,743 件</span> </div>
+                </a><a class="generator-card" href="/ibarakiken/"> <strong>茨城県</strong> <span
+                        class="generator-subtitle">いばらきけん</span>
+                    <p> 茨城県の市区町村別郵便番号一覧です。44市区町村、
+                        2,866件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>44 市区町村</span> <span>2856 町域</span> <span>2,866 件</span> </div>
+                </a><a class="generator-card" href="/okayamaken/"> <strong>岡山県</strong> <span
+                        class="generator-subtitle">おかやまけん</span>
+                    <p> 岡山県の市区町村別郵便番号一覧です。30市区町村、
+                        2,182件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>30 市区町村</span> <span>2181 町域</span> <span>2,182 件</span> </div>
+                </a><a class="generator-card" href="/okinawaken/"> <strong>沖縄県</strong> <span
+                        class="generator-subtitle">おきなわけん</span>
+                    <p> 沖縄県の市区町村別郵便番号一覧です。41市区町村、
+                        802件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>41 市区町村</span> <span>803 町域</span> <span>802 件</span> </div>
+                </a><a class="generator-card" href="/iwateken/"> <strong>岩手県</strong> <span
+                        class="generator-subtitle">いわてけん</span>
+                    <p> 岩手県の市区町村別郵便番号一覧です。33市区町村、
+                        1,918件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>33 市区町村</span> <span>2044 町域</span> <span>1,918 件</span> </div>
+                </a><a class="generator-card" href="/gifuken/"> <strong>岐阜県</strong> <span
+                        class="generator-subtitle">ぎふけん</span>
+                    <p> 岐阜県の市区町村別郵便番号一覧です。42市区町村、
+                        3,349件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>42 市区町村</span> <span>3328 町域</span> <span>3,349 件</span> </div>
+                </a><a class="generator-card" href="/miyazakiken/"> <strong>宮崎県</strong> <span
+                        class="generator-subtitle">みやざきけん</span>
+                    <p> 宮崎県の市区町村別郵便番号一覧です。26市区町村、
+                        876件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>26 市区町村</span> <span>855 町域</span> <span>876 件</span> </div>
+                </a><a class="generator-card" href="/miyagiken/"> <strong>宮城県</strong> <span
+                        class="generator-subtitle">みやぎけん</span>
+                    <p> 宮城県の市区町村別郵便番号一覧です。39市区町村、
+                        2,870件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>39 市区町村</span> <span>3342 町域</span> <span>2,870 件</span> </div>
+                </a><a class="generator-card" href="/kyoutofu/"> <strong>京都府</strong> <span
+                        class="generator-subtitle">きょうとふ</span>
+                    <p> 京都府の市区町村別郵便番号一覧です。36市区町村、
+                        6,433件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>36 市区町村</span> <span>6287 町域</span> <span>6,433 件</span> </div>
+                </a><a class="generator-card" href="/kumamotoken/"> <strong>熊本県</strong> <span
+                        class="generator-subtitle">くまもとけん</span>
+                    <p> 熊本県の市区町村別郵便番号一覧です。49市区町村、
+                        1,861件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>49 市区町村</span> <span>1854 町域</span> <span>1,861 件</span> </div>
+                </a><a class="generator-card" href="/gunmaken/"> <strong>群馬県</strong> <span
+                        class="generator-subtitle">ぐんまけん</span>
+                    <p> 群馬県の市区町村別郵便番号一覧です。35市区町村、
+                        1,499件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>35 市区町村</span> <span>1482 町域</span> <span>1,499 件</span> </div>
+                </a><a class="generator-card" href="/hiroshimaken/"> <strong>広島県</strong> <span
+                        class="generator-subtitle">ひろしまけん</span>
+                    <p> 広島県の市区町村別郵便番号一覧です。30市区町村、
+                        2,125件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>30 市区町村</span> <span>2096 町域</span> <span>2,125 件</span> </div>
+                </a><a class="generator-card" href="/kagawaken/"> <strong>香川県</strong> <span
+                        class="generator-subtitle">かがわけん</span>
+                    <p> 香川県の市区町村別郵便番号一覧です。17市区町村、
+                        710件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>17 市区町村</span> <span>689 町域</span> <span>710 件</span> </div>
+                </a><a class="generator-card" href="/kouchiken/"> <strong>高知県</strong> <span
+                        class="generator-subtitle">こうちけん</span>
+                    <p> 高知県の市区町村別郵便番号一覧です。34市区町村、
+                        1,692件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>34 市区町村</span> <span>1665 町域</span> <span>1,692 件</span> </div>
+                </a><a class="generator-card" href="/sagaken/"> <strong>佐賀県</strong> <span
+                        class="generator-subtitle">さがけん</span>
+                    <p> 佐賀県の市区町村別郵便番号一覧です。20市区町村、
+                        869件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>20 市区町村</span> <span>868 町域</span> <span>869 件</span> </div>
+                </a><a class="generator-card" href="/saitamaken/"> <strong>埼玉県</strong> <span
+                        class="generator-subtitle">さいたまけん</span>
+                    <p> 埼玉県の市区町村別郵便番号一覧です。72市区町村、
+                        2,972件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>72 市区町村</span> <span>2936 町域</span> <span>2,972 件</span> </div>
+                </a><a class="generator-card" href="/mieken/"> <strong>三重県</strong> <span
+                        class="generator-subtitle">みえけん</span>
+                    <p> 三重県の市区町村別郵便番号一覧です。29市区町村、
+                        2,456件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>29 市区町村</span> <span>2447 町域</span> <span>2,456 件</span> </div>
+                </a><a class="generator-card" href="/yamagataken/"> <strong>山形県</strong> <span
+                        class="generator-subtitle">やまがたけん</span>
+                    <p> 山形県の市区町村別郵便番号一覧です。35市区町村、
+                        1,957件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>35 市区町村</span> <span>1949 町域</span> <span>1,957 件</span> </div>
+                </a><a class="generator-card" href="/yamaguchiken/"> <strong>山口県</strong> <span
+                        class="generator-subtitle">やまぐちけん</span>
+                    <p> 山口県の市区町村別郵便番号一覧です。19市区町村、
+                        1,675件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>19 市区町村</span> <span>1649 町域</span> <span>1,675 件</span> </div>
+                </a><a class="generator-card" href="/yamanashiken/"> <strong>山梨県</strong> <span
+                        class="generator-subtitle">やまなしけん</span>
+                    <p> 山梨県の市区町村別郵便番号一覧です。27市区町村、
+                        945件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>27 市区町村</span> <span>940 町域</span> <span>945 件</span> </div>
+                </a><a class="generator-card" href="/shigaken/"> <strong>滋賀県</strong> <span
+                        class="generator-subtitle">しがけん</span>
+                    <p> 滋賀県の市区町村別郵便番号一覧です。19市区町村、
+                        1,842件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>19 市区町村</span> <span>1851 町域</span> <span>1,842 件</span> </div>
+                </a><a class="generator-card" href="/kagoshimaken/"> <strong>鹿児島県</strong> <span
+                        class="generator-subtitle">かごしまけん</span>
+                    <p> 鹿児島県の市区町村別郵便番号一覧です。43市区町村、
+                        1,453件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>43 市区町村</span> <span>1413 町域</span> <span>1,453 件</span> </div>
+                </a><a class="generator-card" href="/akitaken/"> <strong>秋田県</strong> <span
+                        class="generator-subtitle">あきたけん</span>
+                    <p> 秋田県の市区町村別郵便番号一覧です。25市区町村、
+                        2,156件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>25 市区町村</span> <span>2150 町域</span> <span>2,156 件</span> </div>
+                </a><a class="generator-card" href="/niigataken/"> <strong>新潟県</strong> <span
+                        class="generator-subtitle">にいがたけん</span>
+                    <p> 新潟県の市区町村別郵便番号一覧です。37市区町村、
+                        5,399件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>37 市区町村</span> <span>5428 町域</span> <span>5,399 件</span> </div>
+                </a><a class="generator-card" href="/kanagawaken/"> <strong>神奈川県</strong> <span
+                        class="generator-subtitle">かながわけん</span>
+                    <p> 神奈川県の市区町村別郵便番号一覧です。58市区町村、
+                        2,299件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>58 市区町村</span> <span>2142 町域</span> <span>2,299 件</span> </div>
+                </a><a class="generator-card" href="/aomoriken/"> <strong>青森県</strong> <span
+                        class="generator-subtitle">あおもりけん</span>
+                    <p> 青森県の市区町村別郵便番号一覧です。40市区町村、
+                        2,033件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>40 市区町村</span> <span>2494 町域</span> <span>2,033 件</span> </div>
+                </a><a class="generator-card" href="/shizuokaken/"> <strong>静岡県</strong> <span
+                        class="generator-subtitle">しずおかけん</span>
+                    <p> 静岡県の市区町村別郵便番号一覧です。39市区町村、
+                        2,888件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>39 市区町村</span> <span>2889 町域</span> <span>2,888 件</span> </div>
+                </a><a class="generator-card" href="/ishikawaken/"> <strong>石川県</strong> <span
+                        class="generator-subtitle">いしかわけん</span>
+                    <p> 石川県の市区町村別郵便番号一覧です。19市区町村、
+                        2,482件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>19 市区町村</span> <span>2513 町域</span> <span>2,482 件</span> </div>
+                </a><a class="generator-card" href="/chibaken/"> <strong>千葉県</strong> <span
+                        class="generator-subtitle">ちばけん</span>
+                    <p> 千葉県の市区町村別郵便番号一覧です。59市区町村、
+                        3,603件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>59 市区町村</span> <span>3547 町域</span> <span>3,603 件</span> </div>
+                </a><a class="generator-card" href="/oosakafu/"> <strong>大阪府</strong> <span
+                        class="generator-subtitle">おおさかふ</span>
+                    <p> 大阪府の市区町村別郵便番号一覧です。72市区町村、
+                        3,833件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>72 市区町村</span> <span>3471 町域</span> <span>3,833 件</span> </div>
+                </a><a class="generator-card" href="/ooitaken/"> <strong>大分県</strong> <span
+                        class="generator-subtitle">おおいたけん</span>
+                    <p> 大分県の市区町村別郵便番号一覧です。18市区町村、
+                        1,844件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>18 市区町村</span> <span>1830 町域</span> <span>1,844 件</span> </div>
+                </a><a class="generator-card" href="/nagasakiken/"> <strong>長崎県</strong> <span
+                        class="generator-subtitle">ながさきけん</span>
+                    <p> 長崎県の市区町村別郵便番号一覧です。21市区町村、
+                        1,893件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>21 市区町村</span> <span>1891 町域</span> <span>1,893 件</span> </div>
+                </a><a class="generator-card" href="/naganoken/"> <strong>長野県</strong> <span
+                        class="generator-subtitle">ながのけん</span>
+                    <p> 長野県の市区町村別郵便番号一覧です。77市区町村、
+                        1,695件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>77 市区町村</span> <span>1665 町域</span> <span>1,695 件</span> </div>
+                </a><a class="generator-card" href="/tottoriken/"> <strong>鳥取県</strong> <span
+                        class="generator-subtitle">とっとりけん</span>
+                    <p> 鳥取県の市区町村別郵便番号一覧です。19市区町村、
+                        1,392件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>19 市区町村</span> <span>1396 町域</span> <span>1,392 件</span> </div>
+                </a><a class="generator-card" href="/shimaneken/"> <strong>島根県</strong> <span
+                        class="generator-subtitle">しまねけん</span>
+                    <p> 島根県の市区町村別郵便番号一覧です。19市区町村、
+                        1,179件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>19 市区町村</span> <span>1171 町域</span> <span>1,179 件</span> </div>
+                </a><a class="generator-card" href="/toukyouto/"> <strong>東京都</strong> <span
+                        class="generator-subtitle">とうきょうと</span>
+                    <p> 東京都の市区町村別郵便番号一覧です。62市区町村、
+                        4,161件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>62 市区町村</span> <span>1764 町域</span> <span>4,161 件</span> </div>
+                </a><a class="generator-card" href="/tokushimaken/"> <strong>徳島県</strong> <span
+                        class="generator-subtitle">とくしまけん</span>
+                    <p> 徳島県の市区町村別郵便番号一覧です。24市区町村、
+                        961件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>24 市区町村</span> <span>1153 町域</span> <span>961 件</span> </div>
+                </a><a class="generator-card" href="/tochigiken/"> <strong>栃木県</strong> <span
+                        class="generator-subtitle">とちぎけん</span>
+                    <p> 栃木県の市区町村別郵便番号一覧です。25市区町村、
+                        1,836件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>25 市区町村</span> <span>1822 町域</span> <span>1,836 件</span> </div>
+                </a><a class="generator-card" href="/naraken/"> <strong>奈良県</strong> <span
+                        class="generator-subtitle">ならけん</span>
+                    <p> 奈良県の市区町村別郵便番号一覧です。39市区町村、
+                        1,906件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>39 市区町村</span> <span>1911 町域</span> <span>1,906 件</span> </div>
+                </a><a class="generator-card" href="/toyamaken/"> <strong>富山県</strong> <span
+                        class="generator-subtitle">とやまけん</span>
+                    <p> 富山県の市区町村別郵便番号一覧です。15市区町村、
+                        2,980件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>15 市区町村</span> <span>3063 町域</span> <span>2,980 件</span> </div>
+                </a><a class="generator-card" href="/fukuiken/"> <strong>福井県</strong> <span
+                        class="generator-subtitle">ふくいけん</span>
+                    <p> 福井県の市区町村別郵便番号一覧です。17市区町村、
+                        2,133件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>17 市区町村</span> <span>2249 町域</span> <span>2,133 件</span> </div>
+                </a><a class="generator-card" href="/fukuokaken/"> <strong>福岡県</strong> <span
+                        class="generator-subtitle">ふくおかけん</span>
+                    <p> 福岡県の市区町村別郵便番号一覧です。72市区町村、
+                        3,307件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>72 市区町村</span> <span>3288 町域</span> <span>3,307 件</span> </div>
+                </a><a class="generator-card" href="/fukushimaken/"> <strong>福島県</strong> <span
+                        class="generator-subtitle">ふくしまけん</span>
+                    <p> 福島県の市区町村別郵便番号一覧です。59市区町村、
+                        3,642件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>59 市区町村</span> <span>3949 町域</span> <span>3,642 件</span> </div>
+                </a><a class="generator-card" href="/hyougoken/"> <strong>兵庫県</strong> <span
+                        class="generator-subtitle">ひょうごけん</span>
+                    <p> 兵庫県の市区町村別郵便番号一覧です。49市区町村、
+                        5,182件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>49 市区町村</span> <span>5201 町域</span> <span>5,182 件</span> </div>
+                </a><a class="generator-card" href="/hokkaidou/"> <strong>北海道</strong> <span
+                        class="generator-subtitle">ほっかいどう</span>
+                    <p> 北海道の市区町村別郵便番号一覧です。188市区町村、
+                        7,974件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>188 市区町村</span> <span>7944 町域</span> <span>7,974 件</span> </div>
+                </a><a class="generator-card" href="/wakayamaken/"> <strong>和歌山県</strong> <span
+                        class="generator-subtitle">わかやまけん</span>
+                    <p> 和歌山県の市区町村別郵便番号一覧です。30市区町村、
+                        1,600件の郵便番号を掲載しています。
+                    </p>
+                    <div class="kpi-line"> <span>30 市区町村</span> <span>1595 町域</span> <span>1,600 件</span> </div>
+                </a> </div>
+        </section>
+        <section class="panel">
+            <div class="section-head">
+                <h2>日本の郵便番号と住所表記</h2>
+                <p>郵便番号検索、住所確認、読み方確認でよく使われる基本情報をまとめています。</p>
+            </div>
+            <div class="narrative">
+                <p>
+                    日本の郵便番号は7桁で、地域ごとの番号体系と町域別の番号から構成されています。当サイトは日本郵便が公開する全国郵便番号データ（120,720件、2026-10-06取得）をもとに、住所・読み方・ローマ字表記を整理しています。
+                </p>
+                <p>
+                    郵便番号が分かっている場合は上の検索窓に番号を入力すると候補が表示されます。住所から調べる場合は、都道府県→市区町村→町域の順にたどると、正式な住所表記とふりがな、対応する郵便番号を確認できます。
+                </p>
+                <p>
+                    各郵便番号の詳細ページでは、住所のコピー、カタカナ・ひらがな・ローマ字の読み方、宛名の書き方（国内・国際郵便）、周辺の郵便番号を掲載しています。海外発送や英語での住所入力が必要な場合にもそのまま利用できます。
+                </p>
+            </div>
+        </section>
+        <section class="listing-card home-guides">
+            <div class="section-head">
+                <h2>郵便番号・住所の実用ガイド</h2>
+                <p>住所入力、国際郵便、引っ越しなどで迷いやすいポイントを解説しています。</p>
+            </div>
+            <div class="guide-teaser-grid"> <a class="guide-teaser" href="/guides/zip-code-structure/"> <span
+                        class="generator-subtitle">約5分</span> <strong>郵便番号7桁の仕組みと数字の意味</strong>
+                    <p>日本の郵便番号がなぜ7桁なのか、3桁と4桁に区切る表記、町域や大口事業所との対応を具体例とともに解説します。</p>
+                </a><a class="guide-teaser" href="/guides/address-in-english/"> <span
+                        class="generator-subtitle">約6分</span> <strong>日本の住所を英語で書く方法（海外発送・国際郵便）</strong>
+                    <p>海外への郵便やEMS、海外通販の登録で必要になる、日本の住所の英語表記ルールを順序・書き方の具体例つきで解説します。</p>
+                </a><a class="guide-teaser" href="/guides/moving-address-change/"> <span
+                        class="generator-subtitle">約6分</span> <strong>引っ越し時の住所変更と郵便の転送手続きチェックリスト</strong>
+                    <p>引っ越しのときに必要な郵便の転送届（転居届）や各種住所変更の手続きを、タイミングと合わせてチェックリスト形式で整理しました。</p>
+                </a> </div> <a class="secondary-link home-guides-more" href="/guides/">すべてのガイドを見る</a>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <nav class="footer-nav" aria-label="フッターナビゲーション"> <a href="/">ホーム</a> <a href="/#search-panel">検索</a> <a
+                href="/#prefectures">都道府県一覧</a> <a href="/guides/">ガイド</a> <a href="/changes/">更新情報</a> <a
+                href="/about/">運営者情報</a> <a href="/terms/">利用規約</a> <a href="/privacy/">プライバシーポリシー</a> <a
+                href="/contact/">お問い合わせ</a> </nav>
+        <p>
+            日本郵便の公開データをもとに郵便番号・住所・読み方を整理しています。<a href="/guides/about-postal-data/">出典と更新方針</a> ・
+            <a
+                href="mailto:info@postaljp.com?subject=%E9%83%B5%E4%BE%BF%E7%95%AA%E5%8F%B7%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E4%BF%AE%E6%AD%A3%E4%BE%9D%E9%A0%BC">データの誤りを報告</a>
+        </p>
+        <p class="site-disclaimer">当サイトは日本郵便株式会社とは提携・関係のない独立した検索サービスです。</p>
+    </footer>
+</div>
+<script>
+    document.addEventListener('click', async (event) => {
+        const target = event.target;
+
+        if (!(target instanceof HTMLElement)) return;
+
+        const copyButton = target.closest('[data-copy-address]');
+        if (copyButton instanceof HTMLButtonElement) {
+            const value = copyButton.dataset.copyAddress || '';
+            if (!value) return;
+
+            try {
+                await navigator.clipboard.writeText(value);
+                copyButton.textContent = 'コピーしました';
+                window.setTimeout(() => {
+                    copyButton.textContent = '住所をコピー';
+                }, 1600);
+            } catch {
+                copyButton.textContent = 'コピー失敗';
+                window.setTimeout(() => {
+                    copyButton.textContent = '住所をコピー';
+                }, 1600);
+            }
+        }
+
+        const topButton = target.closest('[data-top-button]');
+        if (topButton instanceof HTMLButtonElement) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    });
+
+    document.addEventListener('input', (event) => {
+        const target = event.target;
+        if (!(target instanceof HTMLInputElement) || !target.matches('[data-table-filter]')) return;
+
+        const filterId = target.dataset.tableFilter;
+        if (!filterId) return;
+
+        const query = target.value.normalize('NFKC').trim().toLocaleLowerCase('ja');
+        const rows = document.querySelectorAll(`[data-filter-table="${filterId}"] tbody tr`);
+        let visibleRows = 0;
+
+        rows.forEach((row) => {
+            if (!(row instanceof HTMLTableRowElement)) return;
+            const text = (row.textContent || '').normalize('NFKC').toLocaleLowerCase('ja');
+            const visible = !query || text.includes(query);
+            row.hidden = !visible;
+            if (visible) visibleRows += 1;
+        });
+
+        const emptyMessage = document.querySelector(`[data-filter-empty="${filterId}"]`);
+        if (emptyMessage instanceof HTMLElement) {
+            emptyMessage.hidden = visibleRows !== 0;
+        }
+    });
+
+    if (window.location.pathname === '/' && window.location.search.includes('q=')) {
+        window.requestAnimationFrame(() => {
+            document.getElementById('search-panel')?.scrollIntoView({ behavior: 'auto', block: 'start' });
+        });
+    }
+</script> <protonpass-root-a024 data-protonpass-role="root" data-protonpass-theme="os"></protonpass-root-a024>
