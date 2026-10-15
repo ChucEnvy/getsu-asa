@@ -1,7 +1,7 @@
 import requests
 
 from parsers.romaji import hira_to_roma
-from parsers.postalParser import get_links
+from parsers.postalParser import get_muni_links, get_pref_links
 
 
 def search(base_url, param = None):
@@ -18,17 +18,20 @@ def search(base_url, param = None):
 
 
 def main():
-    links = []
-
-    # with open("raws/postalcode.html") as file:
-    #     links = get_links(file.read())
-    #     pprint.pprint(links, width=200)
-
-    postal_search = search("https://postaljp.com/")
-    links = get_links(postal_search)
-
+    sample_text = None
     filename = 'results/links.csv'
-    links.to_csv(filename, index=False, header=['pref', 'romaji', 'muniCount', 'areaCount', 'postalCount', 'link'])
+
+    with open("raws/postaljp_aichiken.html") as file:
+        sample_text = file.read()
+    
+    # postal_search = search("https://postaljp.com/")
+
+    # links = get_pref_links(sample_text)
+    # links.to_csv(filename, index=False, header=['pref', 'prefR', 'link'])
+
+    links = get_muni_links(sample_text)
+    links.to_csv(filename, index=False, header=['muni', 'muniR', 'link'])
+
 
 
 main()

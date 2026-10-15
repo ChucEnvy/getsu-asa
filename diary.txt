@@ -18,3 +18,8 @@
 26/10/13
     Done parsing the prefecture post counts.
     Prepare for scraping each individual prefecture links for code.
+
+26/10/15
+    Skipped one day, but I'm back again.
+    Done the municipalities links crawler.
+    2 more layers to go.
