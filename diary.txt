@@ -23,3 +23,8 @@
     Skipped one day, but I'm back again.
     Done the municipalities links crawler.
     2 more layers to go.
+
+26/10/20
+    Done scrapping postal codes. (120720)
+
+    Next is searching the schedule on the internet, then find a way to normalize it.

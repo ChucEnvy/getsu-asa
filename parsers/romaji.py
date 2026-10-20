@@ -69,10 +69,82 @@ HEPBURN = {
     "ろ": "ro",
     "わ": "wa",
     "ゐ": "yi",
-    "う": "u",
     "ゑ": "ye",
     "を": "wo",
-    "ん": "n"
+    "ん": "n",
+    "ア": "a",
+    "イ": "i",
+    "ウ": "u",
+    "エ": "e",
+    "オ": "o",
+    "カ": "ka",
+    "キ": "ki",
+    "ク": "ku",
+    "ケ": "ke",
+    "コ": "ko",
+    "ガ": "ga",
+    "ギ": "gi",
+    "グ": "gu",
+    "ゲ": "ge",
+    "ゴ": "go",
+    "サ": "sa",
+    "シ": "shi",
+    "ス": "su",
+    "セ": "se",
+    "ソ": "so",
+    "ザ": "za",
+    "ジ": "ji",
+    "ズ": "zu",
+    "ゼ": "ze",
+    "ゾ": "zo",
+    "タ": "ta",
+    "チ": "chi",
+    "ツ": "tsu",
+    "テ": "te",
+    "ト": "to",
+    "ダ": "da",
+    "ヂ": "ji",
+    "ヅ": "zu",
+    "デ": "de",
+    "ド": "do",
+    "ナ": "na",
+    "ニ": "ni",
+    "ヌ": "nu",
+    "ネ": "ne",
+    "ノ": "no",
+    "ハ": "ha",
+    "ヒ": "hi",
+    "フ": "fu",
+    "ヘ": "he",
+    "ホ": "ho",
+    "バ": "ba",
+    "ビ": "bi",
+    "ブ": "bu",
+    "ベ": "be",
+    "ボ": "bo",
+    "パ": "pa",
+    "ピ": "pi",
+    "プ": "pu",
+    "ペ": "pe",
+    "ポ": "po",
+    "マ": "ma",
+    "ミ": "mi",
+    "ム": "mu",
+    "メ": "me",
+    "モ": "mo",
+    "ヤ": "ya",
+    "ユ": "yu",
+    "ヨ": "yo",
+    "ラ": "ra",
+    "リ": "ri",
+    "ル": "ru",
+    "レ": "re",
+    "ロ": "ro",
+    "ワ": "wa",
+    "ヰ": "yi",
+    "ヱ": "ye",
+    "ヲ": "wo",
+    "ン": "n"
 }
 
 # digraphs
@@ -107,9 +179,39 @@ HEPBURN_DI = {
     "ぎゃ": "gya",
     "ぎゅ": "gyu",
     "ぎょ": "gyo",
+    "シャ": "sha",
+    "シュ": "shu",
+    "ショ": "sho",
+    "ジャ": "ja",
+    "ジュ": "ju",
+    "ジョ": "jo",
+    "チャ": "cha",
+    "チュ": "chu",
+    "チョ": "cho",
+    "ニャ": "nya",
+    "ニュ": "nyu",
+    "ニョ": "nyo",
+    "ヒャ": "hya",
+    "ヒュ": "hyu",
+    "ヒョ": "hyo",
+    "ビャ": "bya",
+    "ビュ": "byu",
+    "ビョ": "byo",
+    "ミャ": "mya",
+    "ミュ": "myu",
+    "ミョ": "myo",
+    "リャ": "rya",
+    "リュ": "ryu",
+    "リョ": "ryo",
+    "キャ": "kya",
+    "キュ": "kyu",
+    "キョ": "kyo",
+    "ギャ": "gya",
+    "ギュ": "gyu",
+    "ギョ": "gyo",
 }
 
-def hira_to_roma(str):
+def kana_to_roma(str):
     # Sanitize input string
     str = str.strip().lower().replace("・", " ")
 
@@ -118,10 +220,15 @@ def hira_to_roma(str):
         str = str.replace(diagraph, HEPBURN_DI[diagraph])
 
     # Second pass: replace the rest of the characters
-    for hira in HEPBURN:
-        str = str.replace(hira, HEPBURN[hira])
+    for kana in HEPBURN:
+        str = str.replace(kana, HEPBURN[kana])
 
-    while str.find("っ") != -1:
-        str = str.replace("っ", str[str.find("っ") + 1], 1)
+    for lilTsu in ["っ", "ッ"]:
+        while str.find(lilTsu) != -1:
+            index = str.find(lilTsu)
+            if index + 1 < len(str):
+                str = str[:index] + str[index + 1] + str[index + 1:]
+            else:
+                str = str[:index] + str[index + 1:]
 
     return str.capitalize()
